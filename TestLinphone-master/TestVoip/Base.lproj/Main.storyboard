@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RPG-ZI-w6W">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -110,6 +110,9 @@
                                                                 <integer key="value" value="22"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="RCS-xC-wOD" kind="show" id="zdC-U7-Zpn"/>
+                                                        </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Stz-9g-xoC">
                                                         <rect key="frame" x="0.0" y="40" width="414" height="134"/>
@@ -252,7 +255,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10n-BO-HJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="630" y="27"/>
+            <point key="canvasLocation" x="894" y="33"/>
+        </scene>
+        <!--Call View Controller-->
+        <scene sceneID="rym-vO-7XI">
+            <objects>
+                <viewController storyboardIdentifier="CallViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RCS-xC-wOD" customClass="CallViewController" customModule="TestVoip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Qv-fh-36b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfn-nx-Ng6">
+                                <rect key="frame" x="190" y="208.5" width="34" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Call"/>
+                                <connections>
+                                    <action selector="onActionSend:" destination="RCS-xC-wOD" eventType="touchUpInside" id="Vtg-VA-Rwm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYB-PZ-56K">
+                                <rect key="frame" x="172.5" y="274.5" width="69" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Receive"/>
+                                <connections>
+                                    <action selector="onActionReceive:" destination="RCS-xC-wOD" eventType="touchUpInside" id="96l-4H-iPO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecW-4h-AtL">
+                                <rect key="frame" x="141.5" y="340.5" width="131" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Recaivce delay"/>
+                                <connections>
+                                    <action selector="onActionReceiveWithDelay:" destination="RCS-xC-wOD" eventType="touchUpInside" id="owy-DM-kso"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ecW-4h-AtL" firstAttribute="top" secondItem="MYB-PZ-56K" secondAttribute="bottom" constant="30" id="AYj-cD-ocv"/>
+                            <constraint firstItem="ecW-4h-AtL" firstAttribute="centerX" secondItem="noq-hf-38Z" secondAttribute="centerX" id="OXj-bh-d8m"/>
+                            <constraint firstItem="MYB-PZ-56K" firstAttribute="top" secondItem="Yfn-nx-Ng6" secondAttribute="bottom" constant="30" id="kWb-cb-ZWl"/>
+                            <constraint firstItem="MYB-PZ-56K" firstAttribute="centerX" secondItem="noq-hf-38Z" secondAttribute="centerX" id="q3r-jt-Vrx"/>
+                            <constraint firstItem="Yfn-nx-Ng6" firstAttribute="centerX" secondItem="noq-hf-38Z" secondAttribute="centerX" id="sKa-44-so8"/>
+                            <constraint firstItem="Yfn-nx-Ng6" firstAttribute="centerY" secondItem="noq-hf-38Z" secondAttribute="centerY" multiplier="1:2" id="yHI-fa-UBD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="noq-hf-38Z"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EgF-1m-FlS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1699" y="31"/>
         </scene>
     </scenes>
     <resources>

@@ -1,0 +1,16 @@
+PODS:
+  - liblinphone (4.0.2)
+
+DEPENDENCIES:
+  - liblinphone
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - liblinphone
+
+SPEC CHECKSUMS:
+  liblinphone: ae57ca30c94cc09847becb7e33cb47de94db8cd7
+
+PODFILE CHECKSUM: 71f921da86bda801fcffbcd8a51dc6eda32cf8de
+
+COCOAPODS: 1.7.5
